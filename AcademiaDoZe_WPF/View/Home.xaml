@@ -1,0 +1,34 @@
+﻿<Window x:Class="AcademiaDoZe_WPF.View.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcademiaDoZe_WPF.View"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+        mc:Ignorable="d"
+        Title="Home" Height="720" Width="1280">
+    <Grid>
+        <Button x:Name="txtLogout" Content="{x:Static resources:Idioma.txtLogout}" HorizontalAlignment="Left" Margin="29,636,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="LOGOUT_Click" Background="#FF13293D" Foreground="White" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtMatricula" Content="{x:Static resources:Idioma.txtMatricula}" HorizontalAlignment="Left" Margin="32,179,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="Matriculabtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="32,141,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="SenhaBtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtAluno" Content="{x:Static resources:Idioma.txtAluno}" HorizontalAlignment="Left" Margin="32,65,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="AlunoBtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.637"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.471"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="txtLogradouro" Content="{x:Static resources:Idioma.txtLogradouro}" HorizontalAlignment="Left" Margin="32,27,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="Logradourobtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Frame x:Name="mainFrame" Content="" Margin="195,0,0,0" Background="#13293D" Foreground="White"/>
+        <Button x:Name="txtFrequencia" Content="{x:Static resources:Idioma.txtFrequencia}" HorizontalAlignment="Left" Margin="32,255,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="FrequenciaBtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtTreinos" Content="{x:Static resources:Idioma.txtTreinos}" HorizontalAlignment="Left" Margin="32,331,0,0" VerticalAlignment="Top" Height="33" Width="132" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtAulas" Content="{x:Static resources:Idioma.txtAulas}" HorizontalAlignment="Left" Margin="32,293,0,0" VerticalAlignment="Top" Height="33" Width="132" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtAvaliacao" Content="{x:Static resources:Idioma.txtAvaliacao}" HorizontalAlignment="Left" Margin="32,217,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="AvaliacaoBtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtColaborador" Content="{x:Static resources:Idioma.txtColaborador}" HorizontalAlignment="Left" Margin="32,103,0,0" VerticalAlignment="Top" Height="33" Width="132" Click="ColaboradorBtn_Click" Foreground="White" Background="#FF13293D" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtConfig" Content="{x:Static resources:Idioma.txtConfig}" HorizontalAlignment="Left" Margin="29,598,0,0" VerticalAlignment="Top" Height="33" Width="133" Click="txtConfig_Click" Background="#FF13293D" Foreground="White" FontFamily="Segoe UI Black"/>
+
+    </Grid>
+</Window>

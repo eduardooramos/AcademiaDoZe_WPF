@@ -1,0 +1,46 @@
+﻿<Window
+        x:Class="AcademiaDoZe_WPF.View.WindowConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcademiaDoZe_WPF.View"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime"
+        mc:Ignorable="d"
+        Title="WindowConfig" Height="450" Width="856" Background="#13293D">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="228*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelAtiva" Content="CONFIGURAÇÕES" HorizontalAlignment="Left" Margin="81,28,0,0" VerticalAlignment="Top" BorderBrush="#FF4A1E1E" Foreground="White" FontSize="20" Height="37" Width="259" Grid.Column="2" FontFamily="Segoe UI Black"/>
+        <Label x:Name="labelIdioma" Content="Idioma/Região:" HorizontalAlignment="Left" Margin="5,80,0,0" VerticalAlignment="Top" Height="26" Width="130" Grid.Column="2" Foreground="White"/>
+        <ComboBox x:Name="comboBoxIdioma" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" Height="22" Grid.Column="2">
+            <System:String>pt-BR</System:String>
+            <System:String>en-US</System:String>
+            <System:String>es-ES</System:String>
+        </ComboBox>
+
+        <Button x:Name="salvaIdioma" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="5,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="170" Click="SalvaIdioma_Click" Height="56" Grid.Column="2"/>
+        <Label x:Name="labelProvider" Content="Provider:" HorizontalAlignment="Left" Margin="0,147,0,0" VerticalAlignment="Top" Height="26" Width="130" Grid.Column="2" Foreground="White"/>
+        <ComboBox x:Name="comboBoxProvider" HorizontalAlignment="Left" Margin="0,178,0,0" VerticalAlignment="Top" Width="200" SelectedIndex="0" Grid.Column="2" Height="22">
+            <System:String>System.Data.SqlClient</System:String>
+        </ComboBox>
+        <Label x:Name="labelStrConexao" Content="String de Conexão:" HorizontalAlignment="Left" Margin="0,222,0,0" VerticalAlignment="Top" Height="26" Width="130" Grid.Column="2" Foreground="White"/>
+        <TextBox x:Name="textBoxStringDeConexao" Text="Server=localhost;Database=db_academia;Uid=coelho;Pwd=abcBolinhas12345;TrustServerCertificate=True;" HorizontalAlignment="Left" Margin="0,253,0,0" VerticalAlignment="Top" Width="389" Grid.Column="2" Height="18" />
+        <Button x:Name="salvaBD" Content="Salvar DB" HorizontalAlignment="Left" Margin="405,244,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="136" Click="SalvaDB_Click" Grid.Column="2" Height="27">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.942"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-3.75"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="encerrarAplicacao" Content="Encerrar Aplicação" HorizontalAlignment="Left" Margin="194,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="170" Click="EncerrarAplicacao_Click" Grid.Column="2" Height="56" />
+    </Grid>
+</Window>

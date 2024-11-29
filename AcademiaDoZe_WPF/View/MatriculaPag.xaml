@@ -1,0 +1,52 @@
+﻿<Page x:Class="AcademiaDoZe_WPF.View.MatriculaPag"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AcademiaDoZe_WPF.View"
+        xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MatriculaPag" Height="578" Width="1006" Background="#13293D">
+    <Grid>
+        <Label x:Name="txtMatricula" Content="MATRÍCULA" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30" Foreground="White" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtSalvar" TabIndex="8" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Left" Margin="630,480,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarMat_Click"/>
+        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="91,82,0,0" VerticalAlignment="Top" Height="32" Width="92" Foreground="White"/>
+        <TextBox x:Name="textIdMat" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="22"/>
+        <Label x:Name="txtIdAluno" Content="{x:Static resources:Idioma.txtIdAluno}" HorizontalAlignment="Left" Margin="243,82,0,0" VerticalAlignment="Top" Height="32" Width="133" Foreground="White"/>
+        <TextBox x:Name="TextIdAluMat" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="247,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="22"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="491,82,0,0" VerticalAlignment="Top" Height="32" Width="141" Foreground="White"/>
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="textCpfAluMat" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="495,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="22"/>
+        <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="88,136,0,0" VerticalAlignment="Top" Height="32" Width="221" Foreground="White"/>
+        <TextBox x:Name="textNomeAluMat" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="91,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="719" Height="22"/>
+        <StackPanel x:Name="StackpanelCol2" HorizontalAlignment="Left" Height="110" Margin="88,231,0,0" VerticalAlignment="Top" Width="95">
+            <RadioButton x:Name="txtMensal" Content="{x:Static resources:Idioma.txtMensal}" Height="24" Foreground="White"/>
+            <RadioButton x:Name="txtTrimestral" Content="{x:Static resources:Idioma.txtTrimestral}" Height="24" Background="White" Foreground="White"/>
+            <RadioButton x:Name="txtSemestral" Content="{x:Static resources:Idioma.txtSemestral}" Height="24" Background="White" Foreground="White"/>
+            <RadioButton x:Name="txtAnual" Content="{x:Static resources:Idioma.txtAnual}" Background="White" Foreground="White"/>
+        </StackPanel>
+        <Label x:Name="txtInicio" Content="{x:Static resources:Idioma.txtInicio}" HorizontalAlignment="Left" Margin="230,200,0,0" VerticalAlignment="Top" Width="105" Foreground="White"/>
+        <DatePicker x:Name="textInicioMat" TabIndex="4" HorizontalAlignment="Left" Margin="230,226,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label x:Name="txtFim" Content="{x:Static resources:Idioma.txtFim}" HorizontalAlignment="Left" Margin="230,266,0,0" VerticalAlignment="Top" Width="105" Foreground="White"/>
+        <DatePicker x:Name="textFimMat" TabIndex="5" HorizontalAlignment="Left" Margin="230,292,0,0" VerticalAlignment="Top" Width="146"/>
+        <StackPanel Margin="87,348,763,24">
+            <TextBlock x:Name="txtRestricoes" Text="{x:Static resources:Idioma.txtRestricoes}" Margin="0 0 0 5" Foreground="White"/>
+            <CheckBox x:Name="txtNenhuma" Content="{x:Static resources:Idioma.txtNenhuma}" Foreground="White"/>
+            <CheckBox x:Name="txtProbCardiaco" Content="{x:Static resources:Idioma.txtProbCardiaco}" Foreground="White"/>
+            <CheckBox x:Name="txtProbRespiratorio" Content="{x:Static resources:Idioma.txtProbRespiratorio}" Foreground="White"/>
+            <CheckBox x:Name="txtLesoesMusculares" Content="{x:Static resources:Idioma.txtLesoesMusculares}" Foreground="White"/>
+            <CheckBox x:Name="txtPressaoAlta" Content="{x:Static resources:Idioma.txtPressaoAlta}" Foreground="White"/>
+            <CheckBox x:Name="txtDiabete" Content="{x:Static resources:Idioma.txtDiabete}" Foreground="White"/>
+            <CheckBox x:Name="txtGravidez" Content="{x:Static resources:Idioma.txtGravidez}" Foreground="White"/>
+            <CheckBox x:Name="txtLabirinto" Content="{x:Static resources:Idioma.txtLabirinto}" Foreground="White"/>
+            <CheckBox x:Name="txtAlergias" Content="{x:Static resources:Idioma.txtAlergias}" Foreground="White"/>
+            <CheckBox x:Name="txtRemedio" Content="{x:Static resources:Idioma.txtRemedio}" Foreground="White"/>
+            <CheckBox x:Name="txtOutras" Content="{x:Static resources:Idioma.txtOutras}" Foreground="White"/>
+        </StackPanel>
+        <Label x:Name="txtPlano" Content="{x:Static resources:Idioma.txtPlano}" HorizontalAlignment="Left" Margin="88,200,0,0" VerticalAlignment="Top" Width="95" Foreground="White"/>
+        <Label x:Name="txtObjetivo" Content="{x:Static resources:Idioma.txtObjetivo}" HorizontalAlignment="Left" Margin="276,337,0,0" VerticalAlignment="Top" Width="142" Foreground="White"/>
+        <Label x:Name="txtObservacao" Content="{x:Static resources:Idioma.txtObservacao}" HorizontalAlignment="Left" Margin="274,443,0,0" VerticalAlignment="Top" Width="166" Foreground="White"/>
+        <TextBox x:Name="textObservacaoMat" TabIndex="7" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="278,469,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="72"/>
+        <TextBox x:Name="textObjetivoMat" TabIndex="6" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="276,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="72"/>
+    </Grid>
+</Page>

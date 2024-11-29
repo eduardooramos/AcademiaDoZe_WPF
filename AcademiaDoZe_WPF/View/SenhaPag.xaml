@@ -1,0 +1,26 @@
+﻿<Page x:Class="AcademiaDoZe_WPF.View.SenhaPag"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AcademiaDoZe_WPF.View"
+      xmlns:resources="clr-namespace:AcademiaDoZe_WPF.Properties"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      Title="SenhaPag" Height="578" Width="1006">
+
+    <Grid Background="#13293D">
+        <Label x:Name="txtSenhah1" Content="SENHA" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="30" Foreground="White" FontFamily="Segoe UI Black"/>
+        <Button x:Name="txtSalvar" Content="{x:Static resources:Idioma.txtSalvar}" HorizontalAlignment="Center" Margin="0,447,0,0" Height="61" Width="180" VerticalAlignment="Top" Click="salvarSen_Click"/>
+        <Label x:Name="txtId" Content="{x:Static resources:Idioma.txtId}" HorizontalAlignment="Left" Margin="204,136,0,0" VerticalAlignment="Top" Height="51" Width="151" Foreground="White"/>
+        <TextBox x:Name="textIdSen" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="204,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" Height="35"/>
+        <Label x:Name="txtCpf" Content="{x:Static resources:Idioma.txtCpf}" HorizontalAlignment="Left" Margin="453,136,0,0" VerticalAlignment="Top" Height="51" Width="181" Foreground="White"/>
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" x:Name="TextCpfSen" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="458,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="35"/>
+        <Label x:Name="txtNome" Content="{x:Static resources:Idioma.txtNome}" HorizontalAlignment="Left" Margin="200,222,0,0" VerticalAlignment="Top" Height="52" Width="256" Foreground="White"/>
+        <TextBox x:Name="textNomeSen" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="204,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="625" Height="35"/>
+        <Label x:Name="txtSenha" Content="{x:Static resources:Idioma.txtSenha}" HorizontalAlignment="Left" Margin="204,310,0,0" VerticalAlignment="Top" Width="151" Foreground="White" Height="42"/>
+        <TextBox x:Name="textSenhaSen" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="204,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="35" />
+        <Label x:Name="txtReSenha" Content="{x:Static resources:Idioma.txtReSenha}" HorizontalAlignment="Left" Margin="503,310,0,0" VerticalAlignment="Top" Width="205" Foreground="White" Height="42"/>
+        <TextBox x:Name="textResenhaSen" TabIndex="4" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="503,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" Height="35"/>
+    </Grid>
+</Page>

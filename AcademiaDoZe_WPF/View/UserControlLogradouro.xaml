@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="AcademiaDoZe_WPF.View.UserControlLogradouro"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:local="clr-namespace:AcademiaDoZe_WPF.View"
+            mc:Ignorable="d"
+            d:DesignHeight="178.255" d:DesignWidth="568.144">
+
+    <Grid x:Name="gridLogradouro" Background="#13293D" HorizontalAlignment="Left" Width="568">
+        <TextBlock x:Name="labelId" Text="ID:" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxId" Text="{Binding SelectedLogradouro.Id}" HorizontalAlignment="Left" Margin="15,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" IsEnabled="False"/>
+        <TextBlock x:Name="labelCep" Text="CEP:" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxCep" Text="{Binding SelectedLogradouro.Cep}" HorizontalAlignment="Left" Margin="104,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <Button Content="Filtrar"
+                Command="{Binding FiltrarLogradouroCommand}"
+                CommandParameter="{Binding Text, ElementName=textBoxCep}"
+                HorizontalAlignment="Left" Margin="190,35,0,0" VerticalAlignment="Top" Width="45" Height="21" />
+        <TextBlock x:Name="labelLogradouro" Text="Logradouro:" HorizontalAlignment="Left" Margin="254,10,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxLogradouro" Text="{Binding SelectedLogradouro.Nome}" HorizontalAlignment="Left" Margin="254,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+        <TextBlock x:Name="labelBairro" Text="Bairro:" HorizontalAlignment="Left" Margin="15,63,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxBairro" Text="{Binding SelectedLogradouro.Bairro}" HorizontalAlignment="Left" Margin="15,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBlock x:Name="labelCidade" Text="Cidade:" HorizontalAlignment="Left" Margin="253,60,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4" RenderTransformOrigin="0.478,1.371"/>
+        <TextBox x:Name="textBoxCidade" Text="{Binding SelectedLogradouro.Cidade}" HorizontalAlignment="Left" Margin="254,82,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBlock x:Name="labelUf" Text="UF:" HorizontalAlignment="Left" Margin="15,107,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxUf" Text="{Binding SelectedLogradouro.Uf}" HorizontalAlignment="Left" Margin="15,133,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBlock x:Name="labelPais" Text="Pais:" HorizontalAlignment="Left" Margin="104,102,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxPais" Text="{Binding SelectedLogradouro.Pais}" HorizontalAlignment="Left" Margin="104,133,0,0" VerticalAlignment="Top" Width="450"/>
+    </Grid>
+</UserControl>
